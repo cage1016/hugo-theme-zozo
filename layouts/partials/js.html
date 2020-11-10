@@ -8,3 +8,7 @@
 {{ end }}
 
 {{ template "_internal/google_analytics_async.html" . }}
+
+{{ if (findRE "<pre" .Content 1) }}
+<script src="/js/add-on.js"></script>
+{{ end }}
